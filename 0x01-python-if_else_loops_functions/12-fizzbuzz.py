@@ -10,3 +10,4 @@ for number in range(1, 101):
         print("Fizz ", end="")
         continue
     print(number, "", end="")
+    continue
