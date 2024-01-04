@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 import sys
-
+argv = len(sys.argv) - 1
 if __name__ == "__main__":
-    print(sys.argv)
+    print(argv, "arguments :")
+    for i in range(argv):
+        print((i + 1), ":", (sys.argv[i + 1]))
