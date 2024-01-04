@@ -2,6 +2,6 @@
 import sys
 argv = len(sys.argv) - 1
 if __name__ == "__main__":
-    print(argv, "arguments :")
+    print(argv, "arguments:")
     for i in range(argv):
-        print((i + 1), ":", (sys.argv[i + 1]))
+        print("{}: {}".format(i + 1, sys.argv[i + 1]))
