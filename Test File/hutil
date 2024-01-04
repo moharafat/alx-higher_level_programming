@@ -1,0 +1,232 @@
+Help on module os:
+
+NNAAMMEE
+    os - OS routines for NT or Posix depending on what system we're on.
+
+MMOODDUULLEE  RREEFFEERREENNCCEE
+    https://docs.python.org/3.8/library/os
+    
+    The following documentation is automatically generated from the Python
+    source files.  It may be incomplete, incorrect or include features that
+    are considered implementation detail and may vary between Python
+    implementations.  When in doubt, consult the module reference at the
+    location listed above.
+
+DDEESSCCRRIIPPTTIIOONN
+    This exports:
+      - all functions from posix or nt, e.g. unlink, stat, etc.
+      - os.path is either posixpath or ntpath
+      - os.name is either 'posix' or 'nt'
+      - os.curdir is a string representing the current directory (always '.')
+      - os.pardir is a string representing the parent directory (always '..')
+      - os.sep is the (or a most common) pathname separator ('/' or '\\')
+      - os.extsep is the extension separator (always '.')
+      - os.altsep is the alternate pathname separator (None or '/')
+      - os.pathsep is the component separator used in $PATH etc
+      - os.linesep is the line separator in text files ('\r' or '\n' or '\r\n')
+      - os.defpath is the default search path for executables
+      - os.devnull is the file path of the null device ('/dev/null', etc.)
+    
+    Programs that import and use 'os' stand a better chance of being
+    portable between different platforms.  Of course, they must then
+    only use functions that are defined by all platforms (e.g., unlink
+    and opendir), and leave all pathname manipulation to os.path
+    (e.g., split and join).
+
+CCLLAASSSSEESS
+    builtins.Exception(builtins.BaseException)
+        builtins.OSError
+    builtins.object
+        posix.DirEntry
+    builtins.tuple(builtins.object)
+        stat_result
+        statvfs_result
+        terminal_size
+        posix.sched_param
+        posix.times_result
+        posix.uname_result
+        posix.waitid_result
+    
+    class DDiirrEEnnttrryy(builtins.object)
+     |  Methods defined here:
+     |  
+     |  ____ffssppaatthh____(self, /)
+     |      Returns the path for the entry.
+     |  
+     |  ____rreepprr____(self, /)
+     |      Return repr(self).
+     |  
+     |  iinnooddee(self, /)
+     |      Return inode of the entry; cached per entry.
+     |  
+     |  iiss__ddiirr(self, /, *, follow_symlinks=True)
+     |      Return True if the entry is a directory; cached per entry.
+     |  
+     |  iiss__ffiillee(self, /, *, follow_symlinks=True)
+     |      Return True if the entry is a file; cached per entry.
+     |  
+     |  iiss__ssyymmlliinnkk(self, /)
+     |      Return True if the entry is a symbolic link; cached per entry.
+     |  
+     |  ssttaatt(self, /, *, follow_symlinks=True)
+     |      Return stat_result object for the entry; cached per entry.
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors defined here:
+     |  
+     |  nnaammee
+     |      the entry's base filename, relative to scandir() "path" argument
+     |  
+     |  ppaatthh
+     |      the entry's full path name; equivalent to os.path.join(scandir_path, entry.name)
+    
+    eerrrroorr = class OSError(Exception)
+     |  Base class for I/O related errors.
+     |  
+     |  Method resolution order:
+     |      OSError
+     |      Exception
+     |      BaseException
+     |      object
+     |  
+     |  Built-in subclasses:
+     |      BlockingIOError
+     |      ChildProcessError
+     |      ConnectionError
+     |      FileExistsError
+     |      ... and 7 other subclasses
+     |  
+     |  Methods defined here:
+     |  
+     |  ____iinniitt____(self, /, *args, **kwargs)
+     |      Initialize self.  See help(type(self)) for accurate signature.
+     |  
+     |  ____rreedduuccee____(...)
+     |      Helper for pickle.
+     |  
+     |  ____ssttrr____(self, /)
+     |      Return str(self).
+     |  
+     |  ----------------------------------------------------------------------
+     |  Static methods defined here:
+     |  
+     |  ____nneeww____(*args, **kwargs) from builtins.type
+     |      Create and return a new object.  See help(type) for accurate signature.
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors defined here:
+     |  
+     |  cchhaarraacctteerrss__wwrriitttteenn
+     |  
+     |  eerrrrnnoo
+     |      POSIX exception code
+     |  
+     |  ffiilleennaammee
+     |      exception filename
+     |  
+     |  ffiilleennaammee22
+     |      second exception filename
+     |  
+     |  ssttrreerrrroorr
+     |      exception strerror
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from BaseException:
+     |  
+     |  ____ddeellaattttrr____(self, name, /)
+     |      Implement delattr(self, name).
+     |  
+     |  ____ggeettaattttrriibbuuttee____(self, name, /)
+     |      Return getattr(self, name).
+     |  
+     |  ____rreepprr____(self, /)
+     |      Return repr(self).
+     |  
+     |  ____sseettaattttrr____(self, name, value, /)
+     |      Implement setattr(self, name, value).
+     |  
+     |  ____sseettssttaattee____(...)
+     |  
+     |  wwiitthh__ttrraacceebbaacckk(...)
+     |      Exception.with_traceback(tb) --
+     |      set self.__traceback__ to tb and return self.
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors inherited from BaseException:
+     |  
+     |  ____ccaauussee____
+     |      exception cause
+     |  
+     |  ____ccoonntteexxtt____
+     |      exception context
+     |  
+     |  ____ddiicctt____
+     |  
+     |  ____ssuupppprreessss__ccoonntteexxtt____
+     |  
+     |  ____ttrraacceebbaacckk____
+     |  
+     |  aarrggss
+    
+    class sscchheedd__ppaarraamm(builtins.tuple)
+     |  sched_param(iterable=(), /)
+     |  
+     |  Current has only one field: sched_priority");
+     |  
+     |  sched_priority
+     |    A scheduling parameter.
+     |  
+     |  Method resolution order:
+     |      sched_param
+     |      builtins.tuple
+     |      builtins.object
+     |  
+     |  Methods defined here:
+     |  
+     |  ____rreedduuccee____(...)
+     |      Helper for pickle.
+     |  
+     |  ____rreepprr____(self, /)
+     |      Return repr(self).
+     |  
+     |  ----------------------------------------------------------------------
+     |  Static methods defined here:
+     |  
+     |  ____nneeww____(*args, **kwargs) from builtins.type
+     |      Create and return a new object.  See help(type) for accurate signature.
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data descriptors defined here:
+     |  
+     |  sscchheedd__pprriioorriittyy
+     |      the scheduling priority
+     |  
+     |  ----------------------------------------------------------------------
+     |  Data and other attributes defined here:
+     |  
+     |  nn__ffiieellddss = 1
+     |  
+     |  nn__sseeqquueennccee__ffiieellddss = 1
+     |  
+     |  nn__uunnnnaammeedd__ffiieellddss = 0
+     |  
+     |  ----------------------------------------------------------------------
+     |  Methods inherited from builtins.tuple:
+     |  
+     |  ____aadddd____(self, value, /)
+     |      Return self+value.
+     |  
+     |  ____ccoonnttaaiinnss____(self, key, /)
+     |      Return key in self.
+     |  
+     |  ____eeqq____(self, value, /)
+     |      Return self==value.
+     |  
+     |  ____ggee____(self, value, /)
+     |      Return self>=value.
+     |  
+     |  ____ggeettaattttrriibbuuttee____(self, name, /)
+     |      Return getattr(self, name).
+     |  
+     |  ____ggeettiitteemm____(self, key, /)
+ 
