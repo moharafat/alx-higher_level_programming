@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 def no_c(my_string):
-    my_string.split()
+    my_string = my_string.split()
+    result = ""
     for char in my_string:
-        if my_string[char] == 'c' or my_string[char] == 'C':
-            my_string.remove[char]
+        if char.lower() != "c":
+            result += char
+    return result
