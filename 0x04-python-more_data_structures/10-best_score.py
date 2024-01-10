@@ -4,7 +4,6 @@ def best_score(a_dictionary):
         if len(a_dictionary) > 0:
             best_keys = []
             max_score = max(a_dictionary.values())
-            print (max_score)
             for key, value in a_dictionary.items():
                 if value == max_score:
                     best_keys.append(key)
