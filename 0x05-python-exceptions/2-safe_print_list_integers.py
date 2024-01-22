@@ -7,5 +7,5 @@ def safe_print_list_integers(my_list=[], x=0):
             printed_elements += 1
         except (ValueError, IndexError):
                 continue
-    print("")
+    print()
     return printed_elements
