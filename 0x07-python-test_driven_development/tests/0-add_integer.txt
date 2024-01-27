@@ -1,13 +1,24 @@
-import unittest
-from 0-add_integer import add_integer
+This library is very simple, since it only has one function called
+``add_integer()``.
+Numbers
+=======
+``my_function()`` returns the addition of its arguments.  For numbers,
+that value is equivalent to using the ``+`` operator.
+::
 
-class TestAddingInteger(unittest.TestCase)
-    def test_add(self)
-        # Test addition when 2 numbers are integers
-        self.assertAlmostEqual(add_integer(1), (2))
-
-1 + 2
-100 + (-2)
-2
-100.3 + (-2)
-4 + school
+    >>> from 0-add_integer import add_integer
+    >>> add_integer(1, 2)
+    3
+::
+    >>> add_integer(100, -2)
+    98
+::
+    >>> add_integer(2)
+    100
+::
+    >>> add_integer(100.3, -2)
+    98
+::
+    >>> add_integer(4, "School")
+::
+    >>> add_integer(None)
