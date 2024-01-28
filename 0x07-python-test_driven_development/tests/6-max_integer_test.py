@@ -37,6 +37,16 @@ class TestMaxInteger(unittest.TestCase):
         floaty_and_inty = [3, 77.3, 11.3, 99]
         self.assertEqual(max_integer(floaty_and_inty), 99)
  
+    def test_strings(self):
+        strin = ["Gamed"]
+        self.assertEqual(max_integer(strin), "Gamed")
+
+    def test_list_of_strings(self):
+        strings = ["7mao", "Hello", "123456789", "Ahmed"]
+        self.assertEqual(max_integer(strings), "Ahmed")
+    
+    def test_no_string(self):
+        self.assertEqual(max_integer(""), None)
 
 if __name__ == '__main__':
     unittest.main()
