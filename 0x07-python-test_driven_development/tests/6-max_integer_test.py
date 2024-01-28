@@ -48,5 +48,10 @@ class TestMaxInteger(unittest.TestCase):
     def test_no_string(self):
         self.assertEqual(max_integer(""), None)
 
+    def test_type(self):
+        """raises TypeError if not an integer."""
+        with self.assertRaises(TypeError):
+            max_integer([1, 5, 3, "alx"])
+
 if __name__ == '__main__':
     unittest.main()
