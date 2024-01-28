@@ -42,9 +42,9 @@ class TestMaxInteger(unittest.TestCase):
         self.assertEqual(max_integer(strin), "Gamed")
 
     def test_list_of_strings(self):
-        strings = ["7mao", "Hello", "123456789", "Ahmed"]
-        self.assertEqual(max_integer(strings), "Ahmed")
-    
+        strings = ["emao", "hello", "123456789", "Ahmed", "44"]
+        self.assertEqual(max_integer(strings), "hello")
+
     def test_no_string(self):
         self.assertEqual(max_integer(""), None)
 
