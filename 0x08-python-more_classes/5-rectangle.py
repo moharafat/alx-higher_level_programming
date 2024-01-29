@@ -49,5 +49,6 @@ class Rectangle:
         xyz = ", "
         return "Rectangle(" + str(self.__width) + xyz + str(self.__height) + "\
             )"
+
     def __del__(self):
         print("Bye rectangle...")
