@@ -69,6 +69,7 @@ class Rectangle:
     def square(cls, size=0):
         cls.width == cls.height == cls.size
         return cls(size, size)
+
     def __repr__(self):
         xyz = ", "
         return "Rectangle(" + str(self.__width) + xyz + str(self.__height) + "\
