@@ -1,0 +1,30 @@
+==========================
+The ``my_list`` module
+==========================
+
+This module has one function only called ``print_sorted()``.
+
+    >>> MyList = __import__('1-my_list').MyList
+    >>> my_list = MyList()
+    
+    >>>my_list = MyList([1, 2, 3, 4, 5])
+    >>>print(my_list)
+    [1, 2, 3, 4, 5]
+
+    >>>my_list = MyList([])
+    >>>print(my_list)
+    []
+
+    >>>my_list = None
+    print(my_list)
+	Traceback (most recent call last):
+		...
+	TypeError: my_list must be itratable
+
+    >>>my_list = MyList([3, 2, 1])
+    >>>print(my_list)
+    [1, 2, 3]
+
+    >>>my_list = MyList([1, 2, 3])
+    >>>print(my_list)
+    [1, 2, 3]
