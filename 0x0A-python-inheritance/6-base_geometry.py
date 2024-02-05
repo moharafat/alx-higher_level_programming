@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
- raises an Exception with the message area() is not implemented
+Write a class BaseGeometry
 """
 
 
