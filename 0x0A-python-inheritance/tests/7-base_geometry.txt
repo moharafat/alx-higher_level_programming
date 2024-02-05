@@ -1,0 +1,38 @@
+==========================
+The ``7-base_geometry`` module
+==========================
+
+defining a Base geometry class called BaseGeometry
+This module has one function only called ``area()``.
+
+    >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+    >>> bg = BaseGeometry()
+    >>> type(bg)
+    <class '7-base_geometry.BaseGeometry'>
+
+    >>> bg = BaseGeometry(None)
+
+
+
+
+    >>>my_list = MyList([1, 2, 3, 4, 5])
+    >>>print(my_list)
+    [1, 2, 3, 4, 5]
+
+    >>>my_list = MyList([])
+    >>>print(my_list)
+    []
+
+    >>>my_list = None
+    print(my_list)
+	Traceback (most recent call last):
+		...
+	TypeError: my_list must be itratable
+
+    >>>my_list = MyList([3, 2, 1])
+    >>>print(my_list)
+    [1, 2, 3]
+
+    >>>my_list = MyList([1, 2, 3])
+    >>>print(my_list)
+    [1, 2, 3]
