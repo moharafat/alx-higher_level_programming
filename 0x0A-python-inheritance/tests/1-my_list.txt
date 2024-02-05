@@ -6,7 +6,10 @@ This module has one function only called ``print_sorted()``.
 
     >>> MyList = __import__('1-my_list').MyList
     >>> my_list = MyList()
-    
+    >>> type(my_list)
+    <class '1-my_list.MyList'>
+
+
     >>>my_list = MyList([1, 2, 3, 4, 5])
     >>>print(my_list)
     [1, 2, 3, 4, 5]
