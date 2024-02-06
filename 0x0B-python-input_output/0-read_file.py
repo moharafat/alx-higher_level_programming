@@ -2,5 +2,5 @@
 
 def read_file(filename=""):
     """prints the conent of a file[utf-8] to stdout"""
-    with open(filename, mode="r", encoding="utf-8") as myFIle:
+    with open(filename, "r", encoding="utf-8") as myFIle:
         print(myFIle.read())
