@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-
+"""read file module"""
 def read_file(filename=""):
-    """prints the conent of a file[utf-8] to stdout"""
-    with open(filename, mode="r", encoding="utf-8") as myFIle:
-        print(myFIle.read(), end="")
+    """Read a text file"""
+    with open(filename, encoding="utf-8") as f:
+        print(f.read(), end="")
