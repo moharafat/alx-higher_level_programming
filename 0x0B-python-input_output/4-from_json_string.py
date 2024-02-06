@@ -7,4 +7,4 @@ def from_json_string(my_str):
     """
     Returns:  JSON representation of an object (stringz).
     """
-    return json.dumps(my_str)
+    return json.loads(my_str)
