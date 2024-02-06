@@ -13,5 +13,7 @@ class Student:
         """
         Returns:retrieves a dictionary representation of a Student
         """
-        if attrs
-        return self.__dict__
+        if attrs is None:
+            return self.__dict__
+        if attrs:
+            return attrs.__dict__
