@@ -7,4 +7,4 @@ def class_to_json(obj):
     """
     Returns:  JSON representation of an object (stringz).
     """
-    return json.loads(my_str)
+    return obj.__dict__
