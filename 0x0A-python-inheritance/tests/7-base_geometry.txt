@@ -3,7 +3,7 @@ The ``7-base_geometry`` module
 ==========================
 
 defining a Base geometry class called BaseGeometry
-This module has one function only called ``area()``.
+This module has two functions only called ``area() and integer_validator()``.
 
     >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
     >>> bg = BaseGeometry()
