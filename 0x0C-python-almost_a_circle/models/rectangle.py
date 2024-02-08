@@ -34,16 +34,14 @@ class rectangle(Base):
         return self.__x
     @x.setter
     def x(self, value):
-        if value <= 0:
-            raise ValueError("x must be > 0")
+        if value < 0:
+            raise ValueError("x must be >= 0")
         self.__x = value
     @property
     def y(self):
         return self.__y
     @y.setter
     def y(self, value):
-        if value <= 0:
-            raise ValueError("y must be > 0")
+        if value < 0:
+            raise ValueError("y must be >= 0")
         self.__y = value
-
-
