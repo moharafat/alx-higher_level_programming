@@ -50,7 +50,7 @@ class Rectangle(Base):
         self.__y = value
     def area(self):
         return self.__height * self.__width
-    def display(self):
+    def display(self):#NEEDS TO BE UPDATED [TASK7]
         for row in range(self.height):
             for element in range(self.width):
                 print('#', end="")
@@ -59,3 +59,7 @@ class Rectangle(Base):
     def __str__(self):
         return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.__x, self.__y, self.__width, self.__height)
 
+    def update(self, *args):
+        for arg in args:
+            return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.width, self.height, self.x, self.y)
+        
