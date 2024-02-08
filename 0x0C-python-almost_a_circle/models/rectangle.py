@@ -1,5 +1,3 @@
-
-
 #!/usr/bin/python3
 Base = __import__('base.py').Base
 class rectangle(Base):
