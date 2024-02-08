@@ -50,3 +50,9 @@ class Rectangle(Base):
         self.__y = value
     def area(self):
         return self.__height * self.__width
+    def display(self):
+        for row in range(self.height):
+            for element in range(self.width):
+                print('#', end="")
+            print()
+
