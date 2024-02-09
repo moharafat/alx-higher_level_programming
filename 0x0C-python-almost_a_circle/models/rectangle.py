@@ -51,11 +51,13 @@ class Rectangle(Base):
     def area(self):
         return self.__height * self.__width
     def display(self):#NEEDS TO BE UPDATED [TASK7]
-        if self.height == 0 or self.width == 0:
-            for row in range(self.height):
-                for element in range(self.width):
-                    print('#', end="")
-                print()
+        if self.width == 0 or self.height == 0:
+            print("")
+            return
+        for row in range(self.height):
+            for element in range(self.width):
+                print('#', end="")
+            print()
     def __str__(self):
         return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.__x, self.__y, self.__width, self.__height)
 
