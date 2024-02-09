@@ -17,3 +17,16 @@ class Square(Rectangle):
             for _ in range(self.size):
                 print("#", end="")
             print()
+    @property
+    def size(self):
+        return self.width
+    @size.setter
+    def size(self, value):
+        if not isinstance(value, int):
+            raise TypeError("width must be an integer")
+        if value <= 0:
+            raise ValueError("width must be > 0")
+        self.width = value
+        self.height = value
+    def update(self, *args, **kwargs)
+        
