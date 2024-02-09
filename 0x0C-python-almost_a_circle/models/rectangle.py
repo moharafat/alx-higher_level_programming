@@ -50,11 +50,11 @@ class Rectangle(Base):
         self.__y = value
     def area(self):
         return self.__height * self.__width
-    def display(self):#NEEDS TO BE UPDATED [TASK7]
+    def display(self):
         if self.width == 0 or self.height == 0:
             print("")
             return
-        for row in range(self.height):
+        for row in range(self.height):#NEEDS TO BE UPDATED [TASK7]
             for element in range(self.width):
                 print('#', end="")
             print()
