@@ -7,8 +7,13 @@ class Square(Rectangle):
     def __str__(self):
         return "[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y, self.size)
     def display(self):#NEEDS TO BE UPDATED [TASK7]
-        if self.height == 0 or self.width == 0:
-            for row in range(self.height):
-                for element in range(self.width):
-                    print('#', end="")
-                print()
+        if self.width == 0 or self.height == 0:
+            print("")
+        for _ in range(self.y):
+            print()
+        for _ in range(self.size):
+            for _ in range(self.x):
+                print(" ", end="")
+            for _ in range(self.size):
+                print("#", end="")
+            print()

@@ -51,14 +51,16 @@ class Rectangle(Base):
     def area(self):
         return self.__height * self.__width
     def display(self):
-        for _ in range(self.y):
+        if self.width == 0 or self.height == 0:
+            print("")
+        for _ in range(self.y):  # Print new lines for y coordinate
             print()
-        for _ in range(self.height):
-            for _ in range(self.x):
+        for _ in range(self.height):  # Iterate over rows
+            for _ in range(self.x):  # Print spaces for x coordinate
                 print(" ", end="")
-            for _ in range(self.width):
+            for _ in range(self.width):  # Print # for width of the rectangle
                 print("#", end="")
-            print()
+            print() 
     def __str__(self):
         return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.__x, self.__y, self.__width, self.__height)
 
