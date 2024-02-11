@@ -3,11 +3,12 @@
 import unittest
 from models.rectangle import Rectangle
 
-class Test_Rectangle(unittest.TestCase):
-    def test_width_getter(self):
-        r1 = Rectangle(10, 2)
-        self.assertEqual(1, r1.id)
-
+class TestRectangle(unittest.TestCase):
+    @classmethod
+    def test_width_setter(self):
+        r = Rectangle(5, 7, 7, 5, 1)
+        r.width = 10
+        self.assertEqual(r.width, 10)
 
 if __name__ == '__main__':
     unittest.main()
