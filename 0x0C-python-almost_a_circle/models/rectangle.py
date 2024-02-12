@@ -11,6 +11,7 @@ class Rectangle(Base):
     y: how far away the rectangle is from the top x-axis[newlines]
     """
     def __init__(self, width, height, x=0, y=0, id=None):
+        """Initializing a new Rectangle"""
         self.width = width
         self.height = height
         self.x = x
@@ -19,6 +20,7 @@ class Rectangle(Base):
 
     @property
     def width(self):
+        """Setter & getter the Rectangle's width."""
         return self.__width
 
     @width.setter
@@ -31,6 +33,7 @@ class Rectangle(Base):
 
     @property
     def height(self):
+        """Setter & getter the Rectangle's height."""
         return self.__height
 
     @height.setter
@@ -43,6 +46,7 @@ class Rectangle(Base):
 
     @property
     def x(self):
+        """Setter & getter the Rectangle's x-axis coordiante."""
         return self.__x
 
     @x.setter
@@ -55,6 +59,7 @@ class Rectangle(Base):
 
     @property
     def y(self):
+        """Setter & getter the Rectangle's y-axis coordiante."""
         return self.__y
 
     @y.setter
@@ -66,9 +71,11 @@ class Rectangle(Base):
         self.__y = value
 
     def area(self):
+        """returns the area of the Rectangle"""
         return self.__height * self.__width
 
     def display(self):
+        """Prints the Rectangle with the '#' symbol"""
         if self.width == 0 or self.height == 0:
             print("")
         for _ in range(self.y):  # Print new lines for y coordinate
@@ -81,10 +88,12 @@ class Rectangle(Base):
             print()
 
     def __str__(self):
+        """Returns the str represrntation of the rectangle"""
         return "[Rectangle] ({}) {}/{} - {}/{}"\
     .format(self.id, self.x, self.y, self.width, self.height)
 
     def update(self, *args, **kwargs):
+        """Updates the rectangle with new values"""
         if args:
             if len(args) >= 1:
                 self.id = args[0]
@@ -101,6 +110,7 @@ class Rectangle(Base):
                 setattr(self, key, value)
 
     def to_dictionary(self):
+        """Returns the dictionaryy representation of a Rectangle"""
         return {
             'id': self.id,
             'width': self.width,
