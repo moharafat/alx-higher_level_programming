@@ -16,9 +16,11 @@ class Rectangle(Base):
         self.x = x
         self.y = y
         super().__init__(id)
+
     @property
     def width(self):
         return self.__width
+
     @width.setter
     def width(self, value):
         if not isinstance(value, int):
@@ -26,9 +28,11 @@ class Rectangle(Base):
         if value <= 0:
             raise ValueError("width must be > 0")
         self.__width = value
+
     @property
     def height(self):
         return self.__height
+
     @height.setter
     def height(self, value):
         if not isinstance(value, int):
@@ -36,9 +40,11 @@ class Rectangle(Base):
         if value <= 0:
             raise ValueError("height must be > 0")
         self.__height = value
+
     @property
     def x(self):
         return self.__x
+
     @x.setter
     def x(self, value):
         if not isinstance(value, int):
@@ -46,9 +52,11 @@ class Rectangle(Base):
         if value < 0:
             raise ValueError("x must be >= 0")
         self.__x = value
+
     @property
     def y(self):
         return self.__y
+
     @y.setter
     def y(self, value):
         if not isinstance(value, int):
@@ -56,8 +64,10 @@ class Rectangle(Base):
         if value < 0:
             raise ValueError("y must be >= 0")
         self.__y = value
+
     def area(self):
         return self.__height * self.__width
+
     def display(self):
         if self.width == 0 or self.height == 0:
             print("")
@@ -68,7 +78,8 @@ class Rectangle(Base):
                 print(" ", end="")
             for _ in range(self.width):  # Print # for width of the rectangle
                 print("#", end="")
-            print() 
+            print()
+
     def __str__(self):
         return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.__x, self.__y, self.__width, self.__height)
 
@@ -85,14 +96,14 @@ class Rectangle(Base):
             if len(args) >= 5:
                 self.y = args[4]
         elif kwargs:
-            for key, value in kwargs.items():             
+            for key, value in kwargs.items():
                 setattr(self, key, value)
 
     def to_dictionary(self):
         return {
-            'id':self.id,
-            'width':self.width,
-            'height':self.height,
-            'x':self.x,
-            'y':self.y
+            'id': self.id,
+            'width': self.width,
+            'height': self.height,
+            'x': self.x,
+            'y': self.y
         }
