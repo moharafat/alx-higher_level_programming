@@ -33,5 +33,4 @@ class Base:
         filename = "{}.json".format(cls.__name__)
         with open(filename, "w") as file:
             file.write(cls.to_json_string(list_dicts))
-    def create(cls, **dictionary):
         
