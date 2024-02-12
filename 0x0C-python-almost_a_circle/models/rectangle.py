@@ -1,7 +1,15 @@
 #!/usr/bin/python3
+"""Rectangle is a class tha inherites from Base class"""
 from models.base import Base
-#Base = __import__('base.py').Base
+
+
 class Rectangle(Base):
+    """ Creating a new class called Rectangle and its attributes are:
+    width: which is the width of the rectangle
+    height: which is the length of i
+    x: how far away the rectangle is from the left Y-axis
+    y: how far away the rectangle is from the top x-axis[newlines]
+    """
     def __init__(self, width, height, x=0, y=0, id=None):
         self.width = width
         self.height = height
