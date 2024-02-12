@@ -5,8 +5,6 @@ import json
 
 class Base:
     """Representing the base model"""
-
-
     __nb_objects = 0
 
     def __init__(self, id=None):
@@ -36,8 +34,8 @@ class Base:
         """returns an instance with all attributes already set"""
         if (dictionary) and dictionary != {}:
             if cls.__name__ == "Rectangle":
-                new_class = cls(1,1)
-            else:# Square case
+                new_class = cls(1, 1)
+            else:  # Square case
                 new_class = cls(1)
             new_class.update(**dictionary)
             return new_class
