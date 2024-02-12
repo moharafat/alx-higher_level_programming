@@ -5,7 +5,7 @@ class Square(Rectangle):
         super().__init__(size, size, x, y, id)
         self.size = size
     def __str__(self):
-        return "[{}] ({}) {}/{} - {}".format(type(self).__name__,self.id, self.x, self.y, self.size)
+        return "[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y, self.size)
     def display(self):#NEEDS TO BE UPDATED [TASK7]
         if self.width == 0 or self.height == 0:
             print("")
