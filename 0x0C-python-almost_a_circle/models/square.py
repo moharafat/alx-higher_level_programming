@@ -1,19 +1,23 @@
 #!/usr/bin/python3
+"""Defining a Square class"""
 from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
+    """Representing a square."""
 
     def __init__(self, size, x=0, y=0, id=None):
+        """Initialize a new Square."""
         super().__init__(size, size, x, y, id)
         self.size = size
 
     def __str__(self):
+        """Returns the str & print of a Square."""
         return "[Square] ({}) {}/{} - {}"\
             .format(self.id, self.x, self.y, self.size)
 
-    # NEEDS TO BE UPDATED [TASK7]
     def display(self):
+        """Prints the Square with the '#' symbol"""
         if self.width == 0 or self.height == 0:
             print("")
         for _ in range(self.y):
@@ -27,6 +31,7 @@ class Square(Rectangle):
 
     @property
     def size(self):
+        """Getter & setter for the square's Side value"""
         return self.width
 
     @size.setter
@@ -39,6 +44,7 @@ class Square(Rectangle):
         self.height = value
 
     def update(self, *args, **kwargs):
+        """Udates the Square values"""
         if args:
             if len(args) >= 1:
                 self.id = args[0]
@@ -53,6 +59,7 @@ class Square(Rectangle):
                 setattr(self, key, value)
 
     def to_dictionary(self):
+        """Returns the dictionay Represntation of a square"""
         return {
             'id': self.id,
             'size': self.size,
