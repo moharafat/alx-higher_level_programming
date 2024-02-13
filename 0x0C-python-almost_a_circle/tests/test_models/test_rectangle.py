@@ -97,5 +97,25 @@ class TestRectangle(unittest.TestCase):
             Myrec.display()
             The_Output =  buf.getvalue()
             self.assertEqual(The_Output, The_expected)
+    
+    def test_update(self):
+        My_Buddy = Rectangle(1, 2)
+        My_Buddy.update(9, 8, 7, 6, 5)
+        self.assertEqual(My_Buddy.id, 9)
+        self.assertEqual(My_Buddy.width, 8)
+        self.assertEqual(My_Buddy.height, 7)
+        self.assertEqual(My_Buddy.x, 6)
+        self.assertEqual(My_Buddy.y, 5)
+
+    def test_str(self):
+        Recy = Rectangle(9, 8, 7, 6, 5)
+        self.assertEqual(str(Recy), "[Rectangle] (5) 7/6 - 9/8")
+
+    def test_to_dictionary(self):
+        Recy = Rectangle(9, 8, 7, 6, 5)
+        self.assertEqual(Recy.to_dictionary(), {'x': 7, 'y': 6
+                                                ,'id': 5
+                                                ,'width': 9, 'height': 8})
+
 if __name__ == '__main__':
     unittest.main()
