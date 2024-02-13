@@ -36,6 +36,8 @@ class TestRectangle(unittest.TestCase):
     def test_width_validation(self):
         with self.assertRaises(ValueError):
             Rectangle(-6, 5)
+        with self.assertRaises(TypeError):
+            Rectangle("Hello", 5)
             
 
     def test_height_validation(self):
@@ -53,5 +55,11 @@ class TestRectangle(unittest.TestCase):
         with self.assertRaises(ValueError):
             Rectangle(5, 10, -1)
 
+    def test_x_validation(self):
+        # Test y validation
+        with self.assertRaises(TypeError):
+            Rectangle(5, 10, 6,"invalid")
+        with self.assertRaises(ValueError):
+            Rectangle(5, 10, 8,-1)
 if __name__ == '__main__':
     unittest.main()
