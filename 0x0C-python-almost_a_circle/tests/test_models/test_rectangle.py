@@ -32,10 +32,10 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(My_rect.x, 77)
         self.assertEqual(My_rect.y, 55)
         self.assertEqual(My_rect.id, 1)
-    
-    def test_3_args_str(self):
-        with self.assertRaises(TypeError):
-            My_rect = Rectangle(99, 88, "Hello")
+
+    def test_width_validation(self):
+        with self.assertRaises(ValueError):
+            Rectangle(-6, 5)
 
     def test_height_validation(self):
         # Test height validation
