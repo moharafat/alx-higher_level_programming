@@ -12,6 +12,12 @@ class TestRectangle(unittest.TestCase):
 
     
     def test_4_args(self):
+        My_rect = Rectangle(88, 77, 8)
+        self.assertEqual(My_rect.width, 88)
+        self.assertEqual(My_rect.height, 77)
+        self.assertEqual(My_rect.x, 8)
+
+    def test_4_args(self):
         My_rect = Rectangle(88, 77, 8, 1)
         self.assertEqual(My_rect.width, 88)
         self.assertEqual(My_rect.height, 77)
