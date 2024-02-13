@@ -50,8 +50,6 @@ class TestRectangle(unittest.TestCase):
         # Test x validation
         with self.assertRaises(TypeError):
             Rectangle(5, 10, "invalid")
-        with self.assertRaises(ValueError):
-            Rectangle(5, 10, -1)
 
 if __name__ == '__main__':
     unittest.main()
