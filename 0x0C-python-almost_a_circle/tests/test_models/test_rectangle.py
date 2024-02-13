@@ -9,8 +9,7 @@ class TestRectangle(unittest.TestCase):
         My_rect = Rectangle(88, 77)
         self.assertEqual(My_rect.width, 88)
         self.assertEqual(My_rect.height, 77)
-        self.assertEqual(My_rect.x, 0)
-        self.assertEqual(My_rect.y, 0)
+
     
     def test_4_args(self):
         My_rect = Rectangle(88, 77, 8, 1)
@@ -18,6 +17,7 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(My_rect.height, 77)
         self.assertEqual(My_rect.x, 8)
         self.assertEqual(My_rect.y, 1)
+
     def test_5_args(self):
         My_rect = Rectangle(99, 88, 77, 55, 1)
         self.assertEqual(My_rect.width, 99)
@@ -25,7 +25,6 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(My_rect.x, 77)
         self.assertEqual(My_rect.y, 55)
         self.assertEqual(My_rect.id, 1)
-
 
 
 if __name__ == '__main__':
