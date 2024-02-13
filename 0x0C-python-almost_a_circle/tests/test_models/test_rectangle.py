@@ -32,6 +32,10 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(My_rect.x, 77)
         self.assertEqual(My_rect.y, 55)
         self.assertEqual(My_rect.id, 1)
+    
+    def test_3_args_str(self):
+        My_rect = Rectangle(99, 88, "Hello")
+        with self.assertRaises(TypeError):
 
 
 if __name__ == '__main__':
