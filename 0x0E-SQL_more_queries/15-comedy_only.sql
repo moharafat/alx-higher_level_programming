@@ -6,7 +6,7 @@ FROM tv_shows AS TV
     ON TV.id = S.show_id
 
     INNER JOIN tv_genres AS G
-    ON G.id = TV.id
+    ON G.id = S.genre_id
     WHERE G.name = "Comedy"
 
 ORDER BY TV.title;
