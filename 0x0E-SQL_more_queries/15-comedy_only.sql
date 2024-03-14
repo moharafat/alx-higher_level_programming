@@ -3,10 +3,10 @@
 SELECT TV.title
 FROM tv_shows AS TV
     INNER JOIN tv_show_genres AS S
-    ON G.id = S.genre_id
+    ON TV.id = S.show_id
 
-    INNER JOIN tv_shows AS TV
-    ON S.show_id = TV.id
-    WHERE TV.title = "Dexter"
+    INNER JOIN tv_genres AS G
+    ON G.id = TV.id
+    WHERE G.name = "Comedy"
 
 ORDER BY TV.title;
