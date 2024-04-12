@@ -1,10 +1,11 @@
-import mysql.connector
-mydb = mysql.connector.connect(
+import MySQLdb
+mydb = MySQLdb.connect(
     host="localhost",
-    user="root",
-    password="123pawword"
+    user="mohamed",
+    password="MY_PASS",
+    db="ahmedzdatabase"
 )
-mycursor = mydb.cursor()
-mycursor.execute("SHOW DATABASES")
-for db in mycursor:
+cur = mydb.cursor()
+cur.execute("SHOW DATABASES")
+for db in cur:
     print(db)
