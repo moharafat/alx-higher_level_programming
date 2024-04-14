@@ -16,3 +16,4 @@ if __name__ == "__main__":
     Query = My_Session.query(State).order_by(State.id)
     for state in Query:
         print("{}: {}".format(state.id, state.name))
+
