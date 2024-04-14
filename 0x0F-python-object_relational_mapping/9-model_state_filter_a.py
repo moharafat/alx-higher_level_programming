@@ -16,4 +16,4 @@ if __name__ == "__main__":
     states_with_a = My_Session.query(State).order_by(State.id)
     for state in states_with_a:
         if "a" in state.name:
-            print("{}: {}".format(states_with_a.id, states_with_a.name))
+            print("{}: {}".format(state.id, state.name))
