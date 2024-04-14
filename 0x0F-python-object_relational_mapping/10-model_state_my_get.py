@@ -18,7 +18,6 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     My_Session = Session()
-    
 
     Result = My_Session.query(State).filter(State.name == state_name).first()
     if not Result:
