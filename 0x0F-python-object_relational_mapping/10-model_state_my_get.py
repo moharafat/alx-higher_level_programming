@@ -17,7 +17,7 @@ if __name__ == "__main__":
     
 
     Result = My_Session.query(State).filter(State.name == sys.argv[4]).first()
-    if Result is None:
+    if not Result:
         print("Not found")
     else:
         print("{}".format(Result.id))
