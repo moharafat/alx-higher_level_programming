@@ -17,5 +17,5 @@ if __name__ == "__main__":
 
     Result = State(name="Louisiana")
     My_Session.add(Result)
-    My_Session.commit
+    My_Session.commit()
     print(Result.id)
