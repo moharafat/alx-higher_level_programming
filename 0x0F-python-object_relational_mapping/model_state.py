@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-    """Represents a state for my sql table
-    """
+"""This module creates a model state
+"""
 from sqlalchemy import Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
 
@@ -8,8 +8,10 @@ Base = declarative_base()
 
 
 class State(Base):
-    """Represents a state for my sql table
-    creates a new model stae
+    """this class creates a new mode State
+
+    Args:
+        Base (base): from sqlalchemy
     """
     __tablename__ = 'states'
     id = Column(Integer, primary_key=True)
