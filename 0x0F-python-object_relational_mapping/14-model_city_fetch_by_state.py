@@ -19,6 +19,6 @@ if __name__ == "__main__":
     printed_cities = My_Session.query(City, State).filter(
         State.id == City.state_id).order_by(City.id)
 
-    for state in printed_cities:
-        print("{}: ({}) {}".format(state.name, City.id, state.name))
+    for city, state in printed_cities:
+        print("{}: ({}) {}".format(state.name, city.id, city.name))
     My_Session.commit()
