@@ -1,3 +1,3 @@
 #!/bin/bash
-#sends a GET request then displays the body of the response.
-curl -sL "$1"
+#DELETE request to the URL passed as1st argument & Display Body's response
+curl -sX DELETE "$1"
