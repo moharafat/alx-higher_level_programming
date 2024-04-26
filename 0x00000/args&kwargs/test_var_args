@@ -1,0 +1,6 @@
+def test_var_args(f_args, *argv):
+    print ("first normal argument:", f_args)
+    for arg in argv:
+        print ("another argument through *argv", arg)
+test_var_args('yasooooooob', 'python', 'eggs', 'test', '7ando2a')
+
