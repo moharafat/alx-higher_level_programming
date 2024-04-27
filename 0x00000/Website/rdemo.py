@@ -1,5 +1,5 @@
 import requests
-r = requests.get('https://httpbin.org/basic-auth/corey/testing', timeout=3)
+r = requests.get('https://httpbin.org/basic-auth/corey/testing', auth=('corey', 'testing'))
 print()
-print(r)
+print(r.text)
 print()
