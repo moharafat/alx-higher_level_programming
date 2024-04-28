@@ -1,11 +1,9 @@
 #!/usr/bin/python3
-""" Script tales URL, sends a request to the URL
-"""
+"""takes URL, Dispalys X-Request-Id value"""
 import sys
+import urllib
 import urllib.request
-
-
 if __name__ == "__main__":
-    req = urllib.request.Request(sys.argv[1])
-    with urllib.request.urlopen(req) as response:
+    URL = sys.argv[1]
+    with urllib.request.urlopen(URL) as response:
         print(response.headers.get('X-Request-Id'))
