@@ -1,12 +1,10 @@
 #!/usr/bin/python3
-""" Write a Python script that fetches 
+""" Write a Python script that fetches
 https://alx-intranet.hbtn.io/status
 """
-import urllib.request
+import requests
 if __name__ == "__main__":
-    with urllib.request.urlopen('https://alx-intranet.hbtn.io/status')\
-        as response:
-        content = response.read()
-        print("Body response:")
-        print("\t- type: {}".format(type(content)))
-        print("\t- content: {}".format(content))
+    response = requests.get('https://alx-intranet.hbtn.io/status')
+    print("Body response:")
+    print("\t- type: {}".format(type(response.text)))
+    print("\t- content: {}".format(response.text))
