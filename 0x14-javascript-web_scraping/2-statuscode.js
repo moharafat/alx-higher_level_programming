@@ -1,6 +1,6 @@
 #!/usr/bin/node
 const request = require('request');
-request(process.argv[2], 'utf-8', function (err, response, body) {
-  if (err) throw err;
+request(process.argv[2], function (error, response, body) {
+  if (error) throw error;
   console.log('code: ', response && response.statusCode);
 });
